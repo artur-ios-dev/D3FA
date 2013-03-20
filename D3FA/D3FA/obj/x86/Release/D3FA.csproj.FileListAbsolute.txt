@@ -1,0 +1,11 @@
+C:\Users\Artur\Documents\Visual Studio 2012\Projects\D3FA\D3FA\bin\x86\Release\D3FA.exe.config
+C:\Users\Artur\Documents\Visual Studio 2012\Projects\D3FA\D3FA\bin\x86\Release\D3FA.exe
+C:\Users\Artur\Documents\Visual Studio 2012\Projects\D3FA\D3FA\bin\x86\Release\D3FA.pdb
+C:\Users\Artur\Documents\Visual Studio 2012\Projects\D3FA\D3FA\obj\x86\Release\D3FA.csprojResolveAssemblyReference.cache
+C:\Users\Artur\Documents\Visual Studio 2012\Projects\D3FA\D3FA\obj\x86\Release\D3FA.About.resources
+C:\Users\Artur\Documents\Visual Studio 2012\Projects\D3FA\D3FA\obj\x86\Release\D3FA.Help.resources
+C:\Users\Artur\Documents\Visual Studio 2012\Projects\D3FA\D3FA\obj\x86\Release\D3FA.Main.resources
+C:\Users\Artur\Documents\Visual Studio 2012\Projects\D3FA\D3FA\obj\x86\Release\D3FA.Properties.Resources.resources
+C:\Users\Artur\Documents\Visual Studio 2012\Projects\D3FA\D3FA\obj\x86\Release\D3FA.csproj.GenerateResource.Cache
+C:\Users\Artur\Documents\Visual Studio 2012\Projects\D3FA\D3FA\obj\x86\Release\D3FA.exe
+C:\Users\Artur\Documents\Visual Studio 2012\Projects\D3FA\D3FA\obj\x86\Release\D3FA.pdb
