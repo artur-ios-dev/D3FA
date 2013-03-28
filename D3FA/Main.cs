@@ -31,12 +31,6 @@ namespace D3FA
         Boolean isCtrlDown;
         Boolean isAltDown;
 
-        static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);
-        static readonly IntPtr HWND_NOTOPMOST = new IntPtr(-2);
-        const UInt32 SWP_NOSIZE = 0x0001;
-        const UInt32 SWP_NOMOVE = 0x0002;
-        const UInt32 TOPMOST_FLAGS = SWP_NOMOVE | SWP_NOSIZE;
-
         private static int xpToNextLevel(int level)
         {
             if (level == 0)
@@ -415,23 +409,14 @@ namespace D3FA
             }
         }
 
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
-
-        //static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
-
         private void menuBoxOnTop_CheckedChanged(object sender, EventArgs e)
         {
             if (menuBoxOnTop.Checked)
             {
-                //SetWindowPos(this.Handle, HWND_TOPMOST, 0, 0, 0, 0, TOPMOST_FLAGS);
                 TopMost = true;
-                SetWindowPos(HWND_NOTOPMOST, HWND_TOPMOST, 0, 0, 0, 0, TOPMOST_FLAGS);
             }
             else
             {
-                //SetWindowPos(this.Handle, HWND_NOTOPMOST, 0, 0, 0, 0, TOPMOST_FLAGS);
                 TopMost = false;
             }
         }
@@ -749,25 +734,25 @@ namespace D3FA
             if (Properties.Settings.Default.addEKMod == "Shift") mod5 = isShiftDown;
             else if (Properties.Settings.Default.addEKMod == "Ctrl") mod5 = isCtrlDown;
             else if (Properties.Settings.Default.addEKMod == "Alt") mod5 = isAltDown;
-            
 
-            if (e.KeyCode == Keys.S && mod1)
+
+            if (e.KeyCode == (Keys)Enum.Parse(typeof(Keys), Properties.Settings.Default.startTimerBind) && mod1)
             {
                 buttonStart.PerformClick();
             }
-            else if (e.KeyCode == Keys.D && mod2)
+            else if (e.KeyCode == (Keys)Enum.Parse(typeof(Keys), Properties.Settings.Default.stopTimerBind) && mod2)
             {
                 buttonStop.PerformClick();
             }
-            else if (e.KeyCode == Keys.F && mod3)
+            else if (e.KeyCode == (Keys)Enum.Parse(typeof(Keys), Properties.Settings.Default.addLegBind) && mod3)
             {
                 buttonAddLegendaries.PerformClick();
             }
-            else if (e.KeyCode == Keys.R && mod4)
+            else if (e.KeyCode == (Keys)Enum.Parse(typeof(Keys), Properties.Settings.Default.addDEBind) && mod4)
             {
                 button1.PerformClick();
             }
-            else if (e.KeyCode == Keys.E && mod5)
+            else if (e.KeyCode == (Keys)Enum.Parse(typeof(Keys), Properties.Settings.Default.addEKBind) && mod5)
             {
                 button2.PerformClick();
             }

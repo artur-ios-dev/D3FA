@@ -26,6 +26,7 @@ namespace D3FA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.Save();
             Close();
         }
 
@@ -47,6 +48,32 @@ namespace D3FA
             if (hasFocus != null)
             {
                 hasFocus.Text = tmp;
+                if (hasFocus.Name == "button3")
+                {
+                    Properties.Settings.Default.addLegMod = e.Modifiers.ToString();
+                    Properties.Settings.Default.addLegBind = e.KeyCode.ToString();
+                }
+                else if (hasFocus.Name == "button4")
+                {
+                    Properties.Settings.Default.startTimerMod = e.Modifiers.ToString();
+                    Properties.Settings.Default.startTimerBind = e.KeyCode.ToString();
+                }
+                else if (hasFocus.Name == "button5")
+                {
+                    Properties.Settings.Default.stopTimerMod = e.Modifiers.ToString();
+                    Properties.Settings.Default.stopTimerBind = e.KeyCode.ToString();
+                }
+                else if (hasFocus.Name == "button6")
+                {
+                    Properties.Settings.Default.addDEMod = e.Modifiers.ToString();
+                    Properties.Settings.Default.addDEBind = e.KeyCode.ToString();
+                }
+                else if (hasFocus.Name == "button7")
+                {
+                    Properties.Settings.Default.addEKMod = e.Modifiers.ToString();
+                    Properties.Settings.Default.addEKBind = e.KeyCode.ToString();
+                }
+
                 hasFocus = null;
             }
         }
